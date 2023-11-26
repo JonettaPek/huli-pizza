@@ -11,6 +11,14 @@
 		D46B65712B0C9F08001DE346 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46B656D2B0C9F08001DE346 /* MenuItem.swift */; };
 		D46B65722B0C9F08001DE346 /* OrderItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46B656E2B0C9F08001DE346 /* OrderItem.swift */; };
 		D46B65732B0C9F08001DE346 /* MenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46B656F2B0C9F08001DE346 /* MenuModel.swift */; };
+		D46D24ED2B13455600EC9450 /* OrderItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46D24EC2B13455600EC9450 /* OrderItemView.swift */; };
+		D46D24EF2B135F2700EC9450 /* MenuItemTileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46D24EE2B135F2700EC9450 /* MenuItemTileView.swift */; };
+		D46D24F12B135FBD00EC9450 /* MenuGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46D24F02B135FBD00EC9450 /* MenuGridView.swift */; };
+		D46D24F32B1367B000EC9450 /* FavoriteTileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46D24F22B1367B000EC9450 /* FavoriteTileView.swift */; };
+		D46D24F52B13982500EC9450 /* OrderDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46D24F42B13982500EC9450 /* OrderDetailView.swift */; };
+		D46D24F72B13A9CB00EC9450 /* MenuDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46D24F62B13A9CB00EC9450 /* MenuDetailView.swift */; };
+		D46D24F92B13A9D400EC9450 /* MenuView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46D24F82B13A9D400EC9450 /* MenuView2.swift */; };
+		D46D24FB2B13ACDA00EC9450 /* MenuView3.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46D24FA2B13ACDA00EC9450 /* MenuView3.swift */; };
 		D4DE263D2B0B0A760084F371 /* huli_pizzaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DE263C2B0B0A760084F371 /* huli_pizzaApp.swift */; };
 		D4DE263F2B0B0A760084F371 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DE263E2B0B0A760084F371 /* ContentView.swift */; };
 		D4DE26412B0B0A760084F371 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4DE26402B0B0A760084F371 /* Assets.xcassets */; };
@@ -30,6 +38,14 @@
 		D46B656D2B0C9F08001DE346 /* MenuItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
 		D46B656E2B0C9F08001DE346 /* OrderItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderItem.swift; sourceTree = "<group>"; };
 		D46B656F2B0C9F08001DE346 /* MenuModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuModel.swift; sourceTree = "<group>"; };
+		D46D24EC2B13455600EC9450 /* OrderItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderItemView.swift; sourceTree = "<group>"; };
+		D46D24EE2B135F2700EC9450 /* MenuItemTileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuItemTileView.swift; sourceTree = "<group>"; };
+		D46D24F02B135FBD00EC9450 /* MenuGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuGridView.swift; sourceTree = "<group>"; };
+		D46D24F22B1367B000EC9450 /* FavoriteTileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteTileView.swift; sourceTree = "<group>"; };
+		D46D24F42B13982500EC9450 /* OrderDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderDetailView.swift; sourceTree = "<group>"; };
+		D46D24F62B13A9CB00EC9450 /* MenuDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuDetailView.swift; sourceTree = "<group>"; };
+		D46D24F82B13A9D400EC9450 /* MenuView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView2.swift; sourceTree = "<group>"; };
+		D46D24FA2B13ACDA00EC9450 /* MenuView3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuView3.swift; sourceTree = "<group>"; };
 		D4DE26392B0B0A760084F371 /* huli-pizza.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "huli-pizza.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4DE263C2B0B0A760084F371 /* huli_pizzaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = huli_pizzaApp.swift; sourceTree = "<group>"; };
 		D4DE263E2B0B0A760084F371 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -86,19 +102,26 @@
 		D4DE263B2B0B0A760084F371 /* huli-pizza */ = {
 			isa = PBXGroup;
 			children = (
+				D4DE263E2B0B0A760084F371 /* ContentView.swift */,
+				D46D24F22B1367B000EC9450 /* FavoriteTileView.swift */,
+				D4DE26542B0B57CF0084F371 /* HeaderView.swift */,
+				D4DE263C2B0B0A760084F371 /* huli_pizzaApp.swift */,
+				D46D24F62B13A9CB00EC9450 /* MenuDetailView.swift */,
+				D46D24F02B135FBD00EC9450 /* MenuGridView.swift */,
+				D46D24EE2B135F2700EC9450 /* MenuItemTileView.swift */,
+				D4DE26522B0B579E0084F371 /* MenuItemView.swift */,
+				D4DE26502B0B57910084F371 /* MenuRowView.swift */,
 				D4DE264E2B0B57800084F371 /* MenuView.swift */,
+				D46D24F82B13A9D400EC9450 /* MenuView2.swift */,
+				D46D24FA2B13ACDA00EC9450 /* MenuView3.swift */,
+				D46D24F42B13982500EC9450 /* OrderDetailView.swift */,
+				D46D24EC2B13455600EC9450 /* OrderItemView.swift */,
 				D4DE264C2B0B576D0084F371 /* OrderRowView.swift */,
 				D4DE264A2B0B57530084F371 /* OrderView.swift */,
-				D4DE263C2B0B0A760084F371 /* huli_pizzaApp.swift */,
-				D4DE26502B0B57910084F371 /* MenuRowView.swift */,
-				D4DE26522B0B579E0084F371 /* MenuItemView.swift */,
-				D4DE263E2B0B0A760084F371 /* ContentView.swift */,
-				D4DE26402B0B0A760084F371 /* Assets.xcassets */,
-				D4DE26422B0B0A760084F371 /* Preview Content */,
-				D4DE26542B0B57CF0084F371 /* HeaderView.swift */,
 				D4DE26562B0B629E0084F371 /* RatingsView.swift */,
-				D46B656B2B0C9F08001DE346 /* Model Code */,
 				D4E9FDDC2B10823500DFC700 /* StatusBarView.swift */,
+				D46B656B2B0C9F08001DE346 /* Model Code */,
+				D4DE26422B0B0A760084F371 /* Preview Content */,
 			);
 			path = "huli-pizza";
 			sourceTree = "<group>";
@@ -106,6 +129,7 @@
 		D4DE26422B0B0A760084F371 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
+				D4DE26402B0B0A760084F371 /* Assets.xcassets */,
 				D4DE26432B0B0A760084F371 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
@@ -183,17 +207,25 @@
 			files = (
 				D4DE264F2B0B57800084F371 /* MenuView.swift in Sources */,
 				D4DE264D2B0B576D0084F371 /* OrderRowView.swift in Sources */,
+				D46D24F72B13A9CB00EC9450 /* MenuDetailView.swift in Sources */,
+				D46D24F32B1367B000EC9450 /* FavoriteTileView.swift in Sources */,
+				D46D24F92B13A9D400EC9450 /* MenuView2.swift in Sources */,
 				D46B65702B0C9F08001DE346 /* OrderModel.swift in Sources */,
 				D4DE264B2B0B57530084F371 /* OrderView.swift in Sources */,
 				D4DE26572B0B629E0084F371 /* RatingsView.swift in Sources */,
 				D46B65722B0C9F08001DE346 /* OrderItem.swift in Sources */,
 				D4DE263F2B0B0A760084F371 /* ContentView.swift in Sources */,
+				D46D24ED2B13455600EC9450 /* OrderItemView.swift in Sources */,
 				D4DE26512B0B57910084F371 /* MenuRowView.swift in Sources */,
 				D4DE263D2B0B0A760084F371 /* huli_pizzaApp.swift in Sources */,
 				D46B65732B0C9F08001DE346 /* MenuModel.swift in Sources */,
 				D4E9FDDD2B10823500DFC700 /* StatusBarView.swift in Sources */,
+				D46D24F12B135FBD00EC9450 /* MenuGridView.swift in Sources */,
 				D46B65712B0C9F08001DE346 /* MenuItem.swift in Sources */,
+				D46D24FB2B13ACDA00EC9450 /* MenuView3.swift in Sources */,
+				D46D24F52B13982500EC9450 /* OrderDetailView.swift in Sources */,
 				D4DE26532B0B579E0084F371 /* MenuItemView.swift in Sources */,
+				D46D24EF2B135F2700EC9450 /* MenuItemTileView.swift in Sources */,
 				D4DE26552B0B57CF0084F371 /* HeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

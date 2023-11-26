@@ -12,22 +12,40 @@ struct ContentView: View {
     @StateObject var orders: OrderModel = OrderModel()
     @State private var selectedItem: MenuItem = testMenuItem
     @State private var showOrders: Bool = false
+    @State private var presentGrid: Bool = false
     var body: some View {
-        VStack {
-            HeaderView()
-                .shadow(radius: 5)
-                .environment(\.colorScheme, .light)
-            StatusBarView(showOrders: $showOrders)
-            if showOrders {
+        TabView {
+            VStack {
+                HeaderView()
+                    .shadow(radius: 5)
+                    .environment(\.colorScheme, .light)
+                StatusBarView(showOrders: $showOrders, presentGrid: $presentGrid)
+//                MenuItemView(item: $selectedItem, orders: orders)
+//                    .padding(5)
+//                    .background(.thinMaterial, in: RoundedRectangle(cornerRadius: 10))
+//                if presentGrid {
+//                    MenuGridView(menu: menu, selectedItem: $selectedItem)
+//                } else {
+//                    MenuView(menu: menu, selectedItem: $selectedItem)
+//                }
+                MenuView2(menu: menu)
+                Spacer()
+            }
+            .tabItem {
+                Label("Menu", systemImage: "list.bullet")
+            }
+            VStack {
+                HeaderView()
+                    .shadow(radius: 5)
+                    .environment(\.colorScheme, .light)
+                StatusBarView(showOrders: $showOrders, presentGrid: $presentGrid)
                 OrderView(orders: orders)
                     .cornerRadius(10)
-            } else {
-                MenuItemView(item: $selectedItem, orders: orders)
-                    .padding(5)
-                    .background(.thinMaterial, in: RoundedRectangle(cornerRadius: 10))
-                MenuView(menu: menu, selectedItem: $selectedItem)
+                Spacer()
             }
-            Spacer()
+            .tabItem {
+                Label("Order", systemImage: "cart")
+            }
         }
         .padding()
         .background(.linearGradient(colors: [Color.cyan, Color("Surf"), Color("Sky"), .white], startPoint: .topLeading, endPoint: .bottomTrailing))
