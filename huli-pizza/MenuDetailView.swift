@@ -16,6 +16,8 @@ struct MenuDetailView: View {
     @State private  var quantity:Int = 1
     @State private var name:String = ""
     @State var orderItem = OrderItem(id: -99, item: noMenuItem)
+    @Environment(\.verticalSizeClass) private var vSizeClass
+    @Environment(\.horizontalSizeClass) private var hSizeClass
     func updateOrder(){
         orderItem.quantity = quantity
         orderItem.extraIngredients = doubleIngredient
@@ -74,7 +76,7 @@ struct MenuDetailView: View {
             HStack{
                 Picker(selection: $pizzaCrust ) {
                         ForEach(PizzaCrust.allCases,id:\.self){crust in
-                            Text(crust.rawValue).tag(crust)
+                            Text(crust.rawValue).tag(crust as PizzaCrust?)
                         }
                     } label: {
                         Text("Pizza Crust")
@@ -94,10 +96,6 @@ struct MenuDetailView: View {
                         Text("\(quantity) " + (quantity == 1 ? "pizza" : "pizzas"))
                     }
                 }
-                    
-                    
-                
-               
             }
             .padding(20)
             .padding([.trailing],40)
@@ -109,7 +107,7 @@ struct MenuDetailView: View {
             VStack{
                 HStack{
                     Text("Order for " + (name == "" ? "You" : name ) )
-                        .font(.largeTitle)
+                        .font(vSizeClass == .compact ? .body : .largeTitle)
                     Spacer(minLength: 150)
                     Button{
                         orderItem = OrderItem(id: -999, item: item ?? noMenuItem)
@@ -132,7 +130,7 @@ struct MenuDetailView: View {
                 HStack(alignment:.top){
                     VStack(alignment:.leading){
                         Text(item?.name ?? "Huli Pizza")
-                            .font(.largeTitle)
+                            .font(vSizeClass == .compact ? .body : .title)
                         
                         Text(pizzaCrust?.rawValue ?? "Neopolitan")
                         Text( doubleIngredient ? "Double Toppings" : "")
@@ -165,13 +163,12 @@ struct MenuDetailView: View {
                 Spacer()
                 
             }
-          
-            
-            
-            
-            
         }
         .background(.linearGradient(colors: [.white,Color("Sky"),Color("Surf").opacity(0.3),Color("Surf")], startPoint: .topLeading, endPoint: .bottom))
+        .onChange(of: item) { item in
+            quantity = 1
+            pizzaCrust = item?.crust ?? PizzaCrust.newYork
+        }
     }
     
 }
